@@ -1,19 +1,15 @@
 import React from 'react'
+import ProjectList from './components/ProjectList'
+import Layout from './layout'
 import { appsList } from './appsList'
-interface Props {
-    
-}
+
+interface Props {}
 
 const index = (props: Props) => {
     return (
-        <div>
-            <h2>Apps</h2>
-            { appsList.map(app => (
-                <p>
-                    {app.name}
-                </p>
-            ))}
-        </div>
+        <Layout>
+            <ProjectList list={appsList} />
+        </Layout>
     )
 }
 
