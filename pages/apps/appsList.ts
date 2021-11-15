@@ -6,6 +6,7 @@ export interface AppsItem {
     description: string,
     icon: IconType,
     route: string,
+    badges?: string[]
 }
 
 export const appsList: AppsItem[] = [
@@ -14,5 +15,6 @@ export const appsList: AppsItem[] = [
         description: "Rick and Morty api usage with react redux",
         route: '/rickandmorty',
         icon: ImLab,
+        badges: ['React', 'Redux', 'Redux-thunk', 'Axios', 'React Query']
     },
 ]

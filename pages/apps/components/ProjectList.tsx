@@ -11,7 +11,7 @@ interface Props {
 const ProjectList = (props: Props) => {
     return (
         <div>
-            Project List:
+            <h1 className="text-4xl font-extrabold mb-16">Projects List:</h1>
             {props.list.map(item => (
                 <ProjectItem data={item} key={item.name} />
             ))}
