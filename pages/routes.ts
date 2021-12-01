@@ -25,5 +25,10 @@ export const routes : Routes[] = [
         name: 'Apps',
         href: '/apps',
         position: 4,
+    },
+    {
+        name: 'Posts',
+        href: '/posts',
+        position: 2,
     }
 ] 
