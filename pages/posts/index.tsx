@@ -1,9 +1,9 @@
 import React from "react";
-import { getAllPosts, ArrayOptions } from "../../src/feature/posts";
+import { getAllPosts, } from "../../src/feature/posts";
 import type { GetStaticPropsResult } from "next";
 
 interface Props {
-    posts: ArrayOptions[];
+    posts: [];
 }
 
 
@@ -13,25 +13,7 @@ const Posts = (props: Props) => {
         <div>
             posts
             <ul>
-                {props.posts.map((post) => {
-                    if (typeof post === "string") {
-                        return <p>{post}</p>;
-                    } else {
-                        const section = Object.keys(post)
-                        
-                        for (const key in post) {
-                            if (Object.prototype.hasOwnProperty.call(post, key)) {
-                                const element = post[key];
-                                console.log(element);
-                            }
-                        }
-                        
-                        return (
-                            <p>{section}</p>
-                            
-                        )
-                    }
-                })}
+                
             </ul>
         </div>
     );
@@ -39,10 +21,10 @@ const Posts = (props: Props) => {
 
 export default Posts;
 
-export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
-    return {
-        props: {
-            posts: await getAllPosts(),
-        },
-    };
-}
+// export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
+//     return {
+//         props: {
+//             posts: await getAllPosts(),
+//         },
+//     };
+// }
