@@ -1,5 +1,5 @@
 import React from 'react'
-import type { HeaderProps } from './types'
+import type {SubHeaderProps  } from './types'
 
 const sizesFontsMap = {
     large: 'text-5xl',
@@ -7,7 +7,7 @@ const sizesFontsMap = {
     small: 'text-lg'
 }
 
-export const Header = (props: HeaderProps) => {
+export const Header = (props: SubHeaderProps) => {
 
     const gradient = props.gradient ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent' : ''
     const headerText = props.text ? props.text : props.children

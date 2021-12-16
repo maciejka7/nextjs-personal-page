@@ -12,11 +12,11 @@ interface Props {}
 const styleguide = (props: Props) => {
     return (
         <div>
-            <h1>Styleguide</h1>
+            <Header gradient type="h2">Styleguide</Header>
             { headerSizeVariants.map((header, index) => {
                 return (
                     <div key={index} className="mt-4 mb-6">
-                        <h2 className="italic text-green-600 pb-2">{header.type}</h2>
+                        <h2 className="text-blue-700 pb-2">{header.type}</h2>
                         <Header {...header} />
                     </div>
                 )

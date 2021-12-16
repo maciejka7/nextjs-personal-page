@@ -1,2 +1,2 @@
-export { default as Header } from './header'
+export { Header } from './header'
 export type { HeaderProps }  from './types'
