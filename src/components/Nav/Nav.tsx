@@ -1,14 +1,17 @@
-import React from "react";
-import Link from "next/link";
-import { routes } from "../../routes";
-import type { Routes } from '../../routes'
-import NavList from "./NavList";
+import React from 'react';
+import Link from 'next/link';
+import { routes } from '../../routes';
+import type { Routes } from '../../routes';
+import NavList from './NavList';
 
 interface Props {}
 
-const sortRoutes = (routes: Routes[]) : Routes[] => routes.sort((a ,b) => a.position > b.position ? 0 : -1); 
+const sortRoutes = (routes: Routes[]): Routes[] =>
+  routes.sort((a, b) => (a.position > b.position ? 0 : -1));
 
 export const Nav = (props: Props) => {
+  const sortedRoutes = React.useMemo(() => sortRoutes(routes), [routes]);
+
   return (
     <nav className="mb-12 flex justify-between">
       <Link href="/">
@@ -16,7 +19,7 @@ export const Nav = (props: Props) => {
           Michał <br /> Maciejewski
         </h3>
       </Link>
-      <NavList routes={sortRoutes(routes)} />
+      <NavList routes={sortedRoutes} />
     </nav>
   );
 };
